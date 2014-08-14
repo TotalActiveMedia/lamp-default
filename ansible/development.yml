@@ -1,0 +1,8 @@
+---
+- hosts: vagrant
+  sudo: True
+  tasks:
+    - apt_repository: repo='deb http://ftp.nl.debian.org/debian testing main' state=present
+    - apt: update_cache=yes
+  roles:
+    - apache
