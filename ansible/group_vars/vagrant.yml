@@ -1,0 +1,9 @@
+---
+apache_vhosts:
+  - servername: "example.com"
+    serveralias:
+      - "www.example.com"
+    documentroot: "/var/www/html/vhosts/example.com"
+    fcgi_socket: "fcgi://127.0.0.1:9000"
+    directoryindex: "index.php"
+    serveradmin: "webmaster@example.com"
