@@ -1,0 +1,8 @@
+---
+
+- name: Add Wheezy testing
+  apt_repository: repo='deb http://ftp.nl.debian.org/debian testing main' state=present
+- name: Add dotdeb for PHP 5.5
+  apt_key: id=89DF5277 url=http://www.dotdeb.org/dotdeb.gpg state=present
+- apt_repository: repo='deb http://packages.dotdeb.org wheezy-php55 all' state=present update_cache=no
+- apt_repository: repo='deb-src http://packages.dotdeb.org wheezy-php55 all' state=present update_cache=yes
