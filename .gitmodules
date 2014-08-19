@@ -1,0 +1,9 @@
+[submodule "ansible/roles/php"]
+	path = ansible/roles/php
+	url = git@github.com:TotalActiveMedia/php.git
+[submodule "ansible/roles/apache"]
+	path = ansible/roles/apache
+	url = git@github.com:TotalActiveMedia/apache.git
+[submodule "ansible/roles/mysql"]
+	path = ansible/roles/mysql
+	url = git@github.com:TotalActiveMedia/mysql.git
