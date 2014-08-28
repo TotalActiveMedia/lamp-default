@@ -3,6 +3,7 @@
   sudo: True
   roles:
     - common
+    - composer
     - apache
     - mysql
     - php

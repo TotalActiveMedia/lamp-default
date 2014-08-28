@@ -6,3 +6,9 @@
   apt_key: id=89DF5277 url=http://www.dotdeb.org/dotdeb.gpg state=present
 - apt_repository: repo='deb http://packages.dotdeb.org wheezy-php55 all' state=present update_cache=no
 - apt_repository: repo='deb-src http://packages.dotdeb.org wheezy-php55 all' state=present update_cache=yes
+
+- name: Add common packages
+  apt: name={{ item }} state=latest force=yes
+  with_items:
+    - tmux
+    - vim
