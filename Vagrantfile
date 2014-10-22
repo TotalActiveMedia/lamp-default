@@ -47,10 +47,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  config.vm.synced_folder "www", "/vagrant-nfs", :nfs => true
+  config.vm.synced_folder "www", "/var/www/projects", :nfs => true
 
   # Use vagrant-bindfs to re-mount folder
-  config.bindfs.bind_folder "/vagrant-nfs", "/var/www/projects"
+  # config.bindfs.bind_folder "/vagrant-nfs", "/var/www/projects", :owner => "1111", :group => "1111", :'create-as-user' => true, :perms => "u=rwx:g=rwx:o=rwx", :'create-with-perms' => "u=rwx:g=rwx:o=rwx", :'chown-ignore' => true, :'chgrp-ignore' => true, :'chmod-ignore' => true
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
